@@ -10,14 +10,10 @@ app.config (function ($stateProvider,$urlRouterProvider) {
 		.state('login',{
 			url:"/login",
 			templateUrl:"login/login.html",
-			controller:"loginController as vm"
+			controller:"loginController"
 		});
 
-
-var app = angular.module('sistemaTCC',['ui.router','home']);
-app.config (function ($stateProvider,$urlRouterProvider) {
 	
-	$urlRouterProvider.otherwise("/home");
 	$stateProvider
 		.state('home',{
 			url:"/home",
@@ -25,10 +21,6 @@ app.config (function ($stateProvider,$urlRouterProvider) {
 			controller:"homeController"
 		});
 
-var app = angular.module('sistemaTCC',['ui.router','cadastroAluno']);
-app.config (function ($stateProvider,$urlRouterProvider) {
-	
-	$urlRouterProvider.otherwise("/cadastroAluno");
 
 	$stateProvider
 		.state('cadastroAluno',{
@@ -36,4 +28,46 @@ app.config (function ($stateProvider,$urlRouterProvider) {
 			templateUrl:"cadastroAluno/cadastroAluno.html",
 			controller:"cadastroAlunoController"
 		});
+
+
+	$stateProvider
+		.state('cadastroProfessor',{
+			url:"/cadastroProfessor",
+			templateUrl:"cadastroProfessor/cadastroProfessor.html",
+			controller:"cadastroProfessorController"
+		});
+
+
+	$stateProvider
+		.state('acompanhamentos',{
+			url:"/acompanhamentos",
+			templateUrl:"acompanhamentos/acompanhamentos.html",
+			controller:"acompanhamentosController"
+		});
+
+
+	$stateProvider
+		.state('cadastroOrientacao',{
+			url:"/cadastroOrientacao",
+			templateUrl:"cadastroOrientacao/cadastroOrientacao.html",
+			controller:"cadastroOrientacaoController"
+		});
+
+
+	$stateProvider
+		.state('relatorios',{
+			url:"/relatorios",
+			templateUrl:"relatorios/relatorios.html",
+			controller:"relatoriosController"
+		});
+
+
+	$stateProvider
+		.state('sobre',{
+			url:"/sobre",
+			templateUrl:"sobre/sobre.html",
+			controller:"sobreController"
+		});
+
+
 });
